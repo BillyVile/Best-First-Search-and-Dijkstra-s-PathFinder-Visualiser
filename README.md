@@ -1,10 +1,11 @@
 # Best-First-Search-and-Dijkstra-s-PathFinder-Visualiser
 
-Pygame Pathfinding Visualization
-Description:
+
+
 This project is a Python-based pathfinding visualizer built using the Pygame library. It implements Dijkstra's algorithm and Best-First Search to find the shortest path between two points in a grid. Users can interactively place start and end points, as well as obstacles, to see how these algorithms navigate complex paths.
 
 Features:
+
 Interactive grid for setting start, end, and wall cells.
 Visualization of Dijkstra's Algorithm and Best-First Search.
 Real-time pathfinding animation.
