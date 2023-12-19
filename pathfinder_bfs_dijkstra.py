@@ -2,6 +2,7 @@ import pygame
 import math
 from queue import PriorityQueue 
 import heapq
+import random 
 
 
 
@@ -265,11 +266,23 @@ def run(window, width):
                     
                     best_first_search(lambda: draw(window, grid, dimensions, width), grid, starting_cell, destination_cell)
                 
-                
+                elif event.key == pygame.K_r:
+                    for row in grid: 
+                        for cell in row: 
+                            if cell!= starting_cell and cell != destination_cell:
+                                cell.wipe()
+                    
+                    for row in grid: 
+                        for cell in row:
+                            if cell != starting_cell and cell != destination_cell:
+                                if random.random() < 0.3:
+                                    cell.wall()
+                                
                 if event.key == pygame.K_c:
                     starting_cell = None 
                     destination_cell = None 
                     grid = create_grid(dimensions, width)
+                    
 
     pygame.quit()
 
